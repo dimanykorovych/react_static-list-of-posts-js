@@ -2,9 +2,8 @@ import { CommentList } from '../CommentList/CommentList';
 import { UserInfo } from '../UserInfo/UserInfo';
 import './PostInfo.scss';
 
-export const PostInfo = ({ post, comments = [] }) => {
-  const commentsToRender =
-    comments && comments.length ? comments : (post && post.comments) || [];
+export const PostInfo = ({ post }) => {
+  const commentsToRender = (post && post.comments) || [];
 
   return (
     <div className="PostInfo">
